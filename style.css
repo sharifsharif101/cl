@@ -7,6 +7,8 @@
 body {
   font-family: "Cairo", sans-serif;
   font-optical-sizing: auto;
+  text-decoration: none;
+  list-style: none;
 }
 
 .navbar {
@@ -318,4 +320,102 @@ container {
     }
   }
 }
+.checkbtn {
+  font-size: 22px;
+  color: rgb(0 84 142);
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 890px) {
+  .checkbtn {
+    display: block;
+  }
+  .navbar {
+    position: fixed;
+    height: 100vh;
+    text-align: center;
+    background: aliceblue;
+    display: block;
+    grid-template-columns: 1fr 2fr 1fr;
+  
+    align-items: center;
+    li {
+      margin: 50px;
+      font-size: 19px;
+  }
+  }
+
+
+
+.navbar ul {
+  text-align: center;
+  list-style: none;
+  display: block;
+  justify-content: center;
+  /* Center menu items */
+  gap: 61px;
+}
  
+
+
+#check:checked~ul {
+  left: 0;
+}
+}
+
+nav.navbarmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 15px;
+}
+
+nav img {
+  /* height: 53px; */ /* Set image height */
+  width: 200px; /* Set image width */
+  object-fit: contain;
+}
+#idnav {
+display: none;
+}
+
+#deskMenu{
+  display: none;
+}
+#idnav {
+  display: flex;
+}
+@media (max-width: 900px) {
+//رجع الكلاسين الفوق ديل هنا 
+}
+
+
+.itmeMenu {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;           /* Optional: Makes the div full screen */
+}
+
+/* Remove padding and margin from ul to ensure proper centering */
+.itmeMenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Ensures text alignment is centered */
+}
+
+.itmeMenu li {
+  margin: 10px 0; /* Optional: Adds spacing between list items */
+}
+
+.itmeMenu a {
+  text-decoration: none; /* Removes underline from links */
+  color: #000;           /* Sets link color */
+  font-size: 42px;       /* Adjust font size */
+}

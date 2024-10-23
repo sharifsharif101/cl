@@ -16,7 +16,11 @@
 </head>
 
 <body>
-    <nav class="navbar">  
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <nav class="navbar" id="deskMenu">  
+     
+  
         <!-- Logo -->
         <img src="img/2024-10-20 23_25_32-Window.png" alt="Logo"> <!-- Replace with your logo path -->
         <!-- Navigation Menu -->
@@ -28,10 +32,47 @@
         <!-- Contact Button -->
         <button class="contact-button">اتصل بنا</button>
     </nav>
+ 
+    <nav class="navbarmenu"  id="idnav" style="border: solid;">  
+        <img src="img/2024-10-20 23_25_32-Window.png" alt="Logo"> 
+        <div class="menuBurger" id="menuBurger">
+            <i class="fas fa-bars" style="color: red;font-size: 34px; "  ></i>
+        </div>  
+    </nav>
+    <div class="itmeMenu" id="itmeMenu" style="display: none;">
+        <ul>
+            <ul>
+                <li><a href="#">أبرز خدماتنا</a></li>
+                <li><a href="#">لماذا تختارنا</a></li>
+                <li><a href="#">كيف تعمل!</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <style>
+ 
+ 
+.menuBurger {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menuBurger.menuBurgerX {
+  transform: rotate(45deg);
+}
+
+.menuBurger i {
+  transition: transform 0.3s ease;
+}
+
+.menuBurger.menuBurgerX i {
+  transform: rotate(45deg);
+}
+    </style>
+ 
+   
     <!-- Hero Section with Navbar inside -->
     <section class="hero">
-  
-
         <div class="hero-content">
             <h1>
                 شركة المميز للنظافة<br>
@@ -261,6 +302,23 @@
 
         }
     </style>
+<script>
+ const menuBurger = document.getElementById('menuBurger');
+
+menuBurger.addEventListener('click', () => {
+  menuBurger.classList.toggle('menuBurgerX');
+});
+</script>
+<script>
+    document.getElementById("menuBurger").addEventListener("click", function() {
+        var menu = document.getElementById("itmeMenu");
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "block"; // Show the menu
+        } else {
+            menu.style.display = "none"; // Hide the menu
+        }
+    });
+</script>
 
 </body>
 
